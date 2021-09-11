@@ -1,0 +1,50 @@
+<%- include('../partials/header'); %>
+
+<div class="container">
+    <div class="row">
+ 
+        <div class="col">
+          <div class="row mt-5">
+            <div class="col-6">  
+
+                <h1>Students List</h1>
+
+            </div>  
+
+            <div class="col-6 text-right">
+                <a href="/alunos/cadastrarAlunos" class="btn btn-primary my-3 text-center">Inserir informação dos alunos</a>  
+            </div>
+
+          </div>
+            <table class="table table-sm table-hover">
+
+                <thead>
+                    <tr>
+                        <th>Nome: </th>
+                        <th>Gênero </th>
+                        <th>Série </th>
+                        <th>Turma </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <% resultado.forEach(function(aluno) { %>
+                    <tr>
+                        <td><%= aluno.nome %></td>
+                        <td><%= aluno.genero %></td>
+                        <td><%= aluno.serie %></td>
+                        <td><%= aluno.turma %></td>
+
+                        <td>
+                            <a href="/alunos/editarAluno/<%= aluno._id %>" class="btn btn-sm btn-success">Editar</a>
+                            <a href="/alunos/deletarAluno/<%= aluno._id %>" class="btn btn-sm btn-danger">Excluir</a>
+                        </td>
+                    </tr>
+                    <% }) %>
+                </tbody>
+
+            </table>
+        </div>
+    </div>  
+  </div>
+<%- include('../partials/footer'); %>

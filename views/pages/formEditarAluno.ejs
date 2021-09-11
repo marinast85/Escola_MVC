@@ -1,0 +1,33 @@
+<%- include("../partials/header")%>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <!-- essas duas linhas são da roda de editar de produto -->
+                <h1 class="mt-5">Editar Produtos</h1>
+                <form action="/alunos/editarAluno" method="POST">
+
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do aluno" value="<%=resultado.nome%>">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="valor">Valor Unitário</label>
+                        <input type="number" class="form-control" id="valor" name="valor" placeholder="Masc" value="<%=resultado.genero">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="codBarras">Código de Barras</label>
+                        <input type="text" class="form-control" id="codBarras" name="codBarras" placeholder="0000000" value="<%=resultado.codigoBarras%>">
+                    </div>
+                    <input type="hidden" value="<%=resultado._id %>" name="id">
+                    <button class="btn btn-primary" type="submit">Salvar</button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+<%- include("../partials/footer")%>

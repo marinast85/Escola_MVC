@@ -1,0 +1,51 @@
+<%- include("../partials/header")%>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <!-- mt = margin top -->
+                <h1 class="mt-5">Formulário de cadastro dos alunos</h1>
+                <form action="/alunos/cadastrarAlunos" method="POST">
+                    
+                    <div class="form-group">
+                        <label for="nome">Nome do aluno</label>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do aluno (a)">
+                    </div>
+
+                    <div>
+                        <select type="select" id="genero" name="genero">Genero</select>
+                        <option value="masc">Masculino</option>
+                        <option value="femi">Feminino</option>
+                    </div>
+
+                    <div>
+                        <select type="select" id="serie" name="serie">Serie</select>
+                        <option value="1° ano">1° ano</option>
+                        <option value="2° ano">2° ano</option>
+                        <option value="3° ano">3° ano</option>
+                        <option value="4° ano">4° ano</option>
+                        <option value="5° ano">5° ano</option>
+                        <option value="6° ano">6° ano</option>
+                        <option value="7° ano">7° ano</option>
+                        <option value="8° ano">8° ano</option>
+                        <option value="9° ano">9° ano</option>
+                        <option value="10° ano">10° ano</option>
+                    </div>
+
+                    <div>
+                        <select type="select" id="turma" name="turma">Turma</select>
+                        <option value="turma a">Turma A</option>
+                        <option value="turma b">Turma B</option>
+                        <option value="turma c">Turma C</option>
+                        <option value="turma d">Turma D</option>
+                    </div>
+
+                    <button class="btn btn-primary" type="submit">Salvar</button>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+<%- include("../partials/footer")%>
